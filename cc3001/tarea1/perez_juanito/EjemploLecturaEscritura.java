@@ -19,6 +19,9 @@ public class EjemploLecturaEscritura
         {
             output += input + "\n";
             //juntamos toda la salida en un string
+
+            //.split(" ")
+            //Integer.parseInt()
         }
 
         System.out.print ( output );
