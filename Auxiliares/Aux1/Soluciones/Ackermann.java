@@ -1,19 +1,28 @@
-package Auxiliares.Aux1;
+package Auxiliares.Aux1.Soluciones;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Created by arachnid92 on 09-09-15.
+ */
 public class Ackermann {
 
     public static int ackermann ( int m, int n )
     {
+
+        if ( m < 0 || n < 0 )
+            return 0;
+
         if ( m == 0 )
             return n + 1;
-        else if ( n == 0 )
-            return ackermann( m - 1, 1);
-        else
-            return ackermann( m - 1, ackermann( m, n - 1));
+
+        if ( n == 0 )
+            return ackermann( m - 1, 1 );
+
+        return ackermann( m - 1, ackermann( m, n - 1 ) );
+
     }
 
     public static void main ( String[] args ) throws IOException {
@@ -29,12 +38,12 @@ public class Ackermann {
             mn = input.split(" ");
             int M = Integer.parseInt(mn[0]);
             int N = Integer.parseInt(mn[1]);
-            System.out.print(ackermann(M, N) + "\n");
+            output += ackermann(M, N) + "\n";
         }
 
-        //System.out.print ( output );
+        System.out.print ( output );
         //luego, lo imprimimos de una
-        //System.out.flush ();
+        System.out.flush ();
         in.close ();
 
     }
