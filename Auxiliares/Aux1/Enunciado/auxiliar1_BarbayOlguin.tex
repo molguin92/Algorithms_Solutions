@@ -1,0 +1,58 @@
+\documentclass[11pt,spanish]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+
+\pagestyle{empty}
+
+\begin{document}
+\title{\vspace*{-3cm}CC3001 Algoritmos y Estructuras de Datos
+\\Auxiliar 1
+}
+\author{
+Prof.\ Jérémy Barbay
+\\Aux. \ Manuel Olguín
+}
+
+\date{Fecha: 9 de septiembre de 2014}
+
+\maketitle
+\thispagestyle{empty}
+
+\section*{Problema 1: Iteratividad}
+
+Para cada uno de los algoritmos requeridos, considere lo siguiente:
+
+\begin{itemize}
+  \item Defina un invariante adecuado.
+  \item Defina las condiciones iniciales para que el invariante se cumpla antes de comenzar el primer ciclo.
+  \item Defina la condición de término del algoritmo.
+  \item Escriba el cuerpo del ciclo en Java.
+\end{itemize}
+
+Los algoritmos son:
+
+\begin{enumerate}
+ \item Dado un String, diseñe un algoritmo iterativo para determinar si éste es palíndromo. Un String es palíndromo si su inverso es igual a él (por ejemplo: ``sometemos'').
+ \item Diseñe un algoritmo iterativo que invierta las consonantes en un String. Por ejemplo, si el algoritmo recibe como entrada el String ``paralelepípedo'', debe retornar ``dapapelelírepo''.
+\end{enumerate}
+
+\section*{Problema 2: Recursión}
+
+La función de Ackermann es una función importante en la teoría de computabilidad. Se define de manera recursiva como sigue:
+
+\[ A(m,n) =
+\begin{cases}
+    n+1& \text{si } m = 0\\
+    A(m-1, 1)& \text{si } m > 0 \text{ y } n = 0\\
+    A(m-1, A(m, n-1))& \text{si } m > 0 \text{ y } n > 0
+\end{cases}
+\]
+
+Implementela en Java (obviamente, de manera recursiva). Además, implemente un método \texttt{main()} que permita obtener los parámetros $m$ y $n$ desde \texttt{STDIN} y luego retorne el resultado en \texttt{STDOUT}.
+
+\end{document}
